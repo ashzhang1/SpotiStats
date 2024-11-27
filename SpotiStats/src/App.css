@@ -1,0 +1,31 @@
+/* These are the landing page styles */
+
+.nav-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  padding: 1rem 2rem;
+}
+
+.nav-bar-elements {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 100%;
+  padding-right: 1rem;
+}
+
+.repo-link-img {
+  width: 24px;
+  height: 24px;
+}
+
+.repo-link {
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+}
