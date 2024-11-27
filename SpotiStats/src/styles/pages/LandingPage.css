@@ -1,0 +1,79 @@
+/* landing page */
+.landing-page-container {
+  background-image: url("../../assets/background.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10vh;
+}
+
+.landing-page-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-title {
+  font-size: 7em;
+}
+
+.landing-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing-page-subtitle {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.get-started-button {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  background-color: #4a5d6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.get-started-button:hover {
+  background-color: #3a4a55;
+}
+
+@media (max-width: 768px) {
+  .landing-page-container {
+    background-size: 80% auto; /* Makes background smaller on tablets */
+    margin-top: -5vh; /* Reduced negative margin */
+  }
+
+  .logo-title {
+    font-size: 4em; /* Smaller title for medium screens */
+  }
+
+  .landing-page-subtitle {
+    font-size: 1.5rem; /* Smaller subtitle */
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-page-container {
+    background-size: 90% auto; /* Even smaller background for phones */
+  }
+
+  .logo-title {
+    font-size: 3em; /* Further reduced title size */
+  }
+
+  .landing-page-subtitle {
+    font-size: 1.25rem;
+  }
+}
