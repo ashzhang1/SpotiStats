@@ -1,6 +1,8 @@
 /* landing page */
-.landing-page-container {
+
+.hero-section {
   background-image: url("../../assets/background.svg");
+  background-size: 90% auto;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -8,7 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: -10vh;
+  position: relative;
 }
 
 .landing-page-logo-container {
@@ -19,6 +21,13 @@
 
 .logo-title {
   font-size: 7em;
+}
+
+.logo-image {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  display: block;
 }
 
 .landing-page-content {
@@ -40,9 +49,9 @@
   color: white;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s ease;
   font-weight: 500;
   margin-top: 2rem;
+  transition: background-color 0.2s ease;
 }
 
 .get-started-button:hover {
@@ -50,30 +59,29 @@
 }
 
 @media (max-width: 768px) {
-  .landing-page-container {
-    background-size: 80% auto; /* Makes background smaller on tablets */
-    margin-top: -5vh; /* Reduced negative margin */
-  }
-
   .logo-title {
-    font-size: 4em; /* Smaller title for medium screens */
+    font-size: 4em;
   }
 
   .landing-page-subtitle {
-    font-size: 1.5rem; /* Smaller subtitle */
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .landing-page-container {
-    background-size: 90% auto; /* Even smaller background for phones */
-  }
-
   .logo-title {
-    font-size: 3em; /* Further reduced title size */
+    font-size: 3em;
   }
 
   .landing-page-subtitle {
     font-size: 1.25rem;
   }
+}
+
+/* about section */
+.about-section {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
 }

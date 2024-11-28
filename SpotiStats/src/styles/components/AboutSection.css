@@ -1,0 +1,70 @@
+/* about section internal styles */
+
+.about-section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.about-main-title-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-main-title {
+  font-weight: 600;
+  font-size: 2.25em;
+  text-align: center;
+}
+
+.about-features-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+}
+
+.about-description {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.tech-stack-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+}
+
+.about-project-title {
+  font-weight: 600;
+  font-size: 2.25em;
+}
+
+.about-project-description {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tech-stack-section {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.tech-stack-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.icon-label-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
