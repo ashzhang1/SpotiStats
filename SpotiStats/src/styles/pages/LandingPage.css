@@ -28,6 +28,7 @@
   height: auto;
   width: 100%;
   display: block;
+  aspect-ratio: 1 / 1;
 }
 
 .landing-page-content {
@@ -66,6 +67,10 @@
   .landing-page-subtitle {
     font-size: 1.5rem;
   }
+
+  .logo-image {
+    width: 80px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -75,6 +80,10 @@
 
   .landing-page-subtitle {
     font-size: 1.25rem;
+  }
+
+  .logo-image {
+    width: 60px;
   }
 }
 
