@@ -18,6 +18,7 @@ export default function AboutSection() {
         <img
           src={analyticsIcon}
           alt="Analytics chart icon representing data visualization features"
+          className="analytics-icon"
         />
         <p className="about-description">
           Utilising various charts, visualise your Spotify listening patterns,
@@ -38,16 +39,20 @@ export default function AboutSection() {
         <div className="tech-stack-section">
           <h3 className="tech-stack-title">Tech-Stack:</h3>
           <div className="icon-label-container">
-            <img src={reactIcon} alt="React icon" />
-            <span>React</span>
+            <img src={reactIcon} alt="React icon" className="tech-stack-icon" />
+            <span className="tech-name">React</span>
           </div>
           <div className="icon-label-container">
-            <img src={viteIcon} alt="React icon" />
-            <span>Vite</span>
+            <img src={viteIcon} alt="React icon" className="tech-stack-icon" />
+            <span className="tech-name">Vite</span>
           </div>
           <div className="icon-label-container">
-            <img src={spotifyIcon} alt="React icon" />
-            <span>Spotify API</span>
+            <img
+              src={spotifyIcon}
+              alt="React icon"
+              className="tech-stack-icon"
+            />
+            <span className="tech-name">Spotify API</span>
           </div>
         </div>
       </div>
