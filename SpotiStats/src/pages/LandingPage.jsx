@@ -1,6 +1,8 @@
 import "../styles/pages/LandingPage.css";
 import logo from "../assets/logo.svg";
 import AboutSection from "../components/AboutSection";
+import { SpotifyAuthButton } from "../components/SpotifyAuthButton";
+import { spotifyConfig } from "../config/spotifyConfig";
 
 export default function LandingPage() {
   return (
@@ -13,7 +15,7 @@ export default function LandingPage() {
           </div>
           <h2 className="landing-page-subtitle">Chart your musical voyage</h2>
         </div>
-        <button className="get-started-button">Get Started</button>
+        <SpotifyAuthButton config={spotifyConfig} />
       </section>
 
       <section className="about-section">
