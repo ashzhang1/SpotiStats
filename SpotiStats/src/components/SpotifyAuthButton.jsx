@@ -15,7 +15,7 @@ export const SpotifyAuthButton = ({ config }) => {
       disabled={isLoading}
       aria-busy={isLoading}
     >
-      Get Started
+      {isLoading ? "Loading..." : "Get Started"}
     </button>
   );
 };

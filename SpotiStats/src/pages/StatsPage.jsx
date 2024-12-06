@@ -1,4 +1,22 @@
+import { useSpotifyUser } from "../hooks/userSpotifyUser";
+import { useSpotifyToken } from "../hooks/useSpotifyToken";
+
 export default function StatsPage() {
+  const { token } = useSpotifyToken();
+  const { userData, loading, error } = useSpotifyUser(token);
+
+  if (loading) {
+    return <div>loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  if (!userData) {
+    return <div>No user data available</div>;
+  }
+
   return (
     <div
       style={{
@@ -8,7 +26,7 @@ export default function StatsPage() {
         alignItems: "center",
       }}
     >
-      <h1>Success!</h1>
+      <h1>Welcome {userData.display_name}</h1>
     </div>
   );
 }
