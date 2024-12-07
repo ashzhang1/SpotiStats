@@ -20,4 +20,24 @@ export const spotifyService = {
       throw new Error(`Failed to fetch user data: ${err.message}`);
     }
   },
+
+  async getTopItems(token, itemType) {
+    try {
+      const response = await fetch(`${SPOTIFY_API_BASE}/me/top/${itemType}`, {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      return await response.json();
+    } catch (err) {
+      throw new Error(`Failed to get top ${itemType}: ${err.message}`);
+    }
+  },
 };
