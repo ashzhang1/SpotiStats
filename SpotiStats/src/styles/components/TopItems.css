@@ -1,0 +1,49 @@
+/* General Styles */
+
+.top-items-title {
+  font-size: clamp(2rem, 5vw, 5rem);
+}
+
+/* Chart Visualisation Styles */
+
+.top-items-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.chart-container {
+  max-width: 75%;
+  width: 60%;
+  height: 400px;
+}
+
+.chart-table-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Table Visualisation Styles */
+.table-vis-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artist-image {
+  clip-path: circle();
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: cover;
+}
+
+.table-vis-cell {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.table-vis-cell-image {
+  width: 100px;
+}

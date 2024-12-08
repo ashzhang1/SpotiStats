@@ -23,13 +23,16 @@ export const spotifyService = {
 
   async getTopItems(token, itemType) {
     try {
-      const response = await fetch(`${SPOTIFY_API_BASE}/me/top/${itemType}`, {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `${SPOTIFY_API_BASE}/me/top/${itemType}?limit=5`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
