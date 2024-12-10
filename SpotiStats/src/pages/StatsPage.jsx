@@ -54,9 +54,10 @@ export default function StatsPage() {
         <TopItems
           title="Top Artists"
           data={topArtistsData}
-          statDescription="Above is your most listened to artists on Spotify. 
+          statDescription="Above are your most listened to artists on Spotify. 
           This was calculated by looking at your data from approximately the last 6 months.
-          The popularity score of an artist is a value between 0 and 100, with 100 being the most popular. The artist's popularity score is calculated from the popularity of all the artist's tracks."
+          The popularity score of an artist is a value between 0 and 100, with 100 being the most popular. 
+          The artist's popularity score is calculated from the popularity of all the artist's tracks."
         />
       </section>
     </>

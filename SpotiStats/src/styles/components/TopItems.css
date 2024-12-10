@@ -2,6 +2,11 @@
 
 .top-items-title {
   font-size: clamp(2rem, 5vw, 5rem);
+  padding-left: clamp(1rem, 2vw, 2rem);
+}
+
+.stat-description {
+  font-size: clamp(1rem, 1vw, 1.25rem);
 }
 
 /* Chart Visualisation Styles */
@@ -11,16 +16,24 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+  margin: 0 auto;
 }
+
 .chart-container {
-  max-width: 75%;
+  max-width: 768px;
+  min-width: 300px;
   width: 60%;
   height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
 }
 
 .chart-table-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  gap: 10%;
 }
 
 /* Table Visualisation Styles */
@@ -46,4 +59,21 @@
 
 .table-vis-cell-image {
   width: 100px;
+}
+
+.table-title {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+/* Anything below tablet size */
+@media (max-width: 768px) {
+  .chart-container {
+    width: 90%;
+    margin: 0 auto;
+    min-width: unset;
+  }
+
+  .chart-table-container {
+    flex-direction: column;
+  }
 }

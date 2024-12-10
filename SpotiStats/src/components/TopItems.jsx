@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import ChartVis from "./chartVis";
-import "../styles/components/TopItems.css";
 import TableVis from "./TableVis";
+import "../styles/components/TopItems.css";
 
 export default function TopItems({ title, data, statDescription }) {
   return (
@@ -10,7 +10,7 @@ export default function TopItems({ title, data, statDescription }) {
       <div className="chart-table-container">
         <div className="chart-container">
           <ChartVis chartData={data} />
-          <p>{statDescription}</p>
+          <p className="stat-description">{statDescription}</p>
         </div>
         <TableVis tableData={data} title={title} />
       </div>

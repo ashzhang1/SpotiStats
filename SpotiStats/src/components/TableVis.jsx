@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
+import "../styles/components/TopItems.css";
 
 export default function TableVis({ title, tableData }) {
   return (
     <div className="table-vis-container">
-      <h2>{title}</h2>
+      <h2 className="table-title">Your {title}</h2>
       <table>
         <tbody>
           {Array.isArray(tableData?.items) ? (
