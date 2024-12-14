@@ -12,7 +12,11 @@ export default function TopItems({ title, data, statDescription }) {
           <ChartVis chartData={data} />
           <p className="stat-description">{statDescription}</p>
         </div>
-        <TableVis tableData={data} title={title} />
+        <TableVis
+          tableData={data}
+          title={title}
+          isTrack={title == "Top Tracks" ? true : false}
+        />
       </div>
     </div>
   );

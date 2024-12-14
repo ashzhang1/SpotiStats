@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
 import "../styles/components/TopItems.css";
 
-export default function TableVis({ title, tableData }) {
+export default function TableVis({ title, tableData, isTrack }) {
+  const getImageUrl = (item) => {
+    return isTrack ? item.album.images[0].url : item.images[0].url;
+  };
+
   return (
     <div className="table-vis-container">
       <h2 className="table-title">Your {title}</h2>
@@ -11,7 +15,7 @@ export default function TableVis({ title, tableData }) {
             tableData.items.map((item, index) => (
               <tr key={item.id || `item-${index}`}>
                 <td className="table-vis-cell table-vis-cell-image">
-                  <img src={item.images[0].url} className="artist-image" />
+                  <img src={getImageUrl(item)} className="artist-image" />
                 </td>
                 <td className="table-vis-cell">{item.name}</td>
               </tr>
@@ -29,6 +33,7 @@ export default function TableVis({ title, tableData }) {
 
 TableVis.propTypes = {
   title: PropTypes.string.isRequired,
+  isTrack: PropTypes.bool,
   tableData: PropTypes.shape({
     items: PropTypes.arrayOf(
       PropTypes.shape({

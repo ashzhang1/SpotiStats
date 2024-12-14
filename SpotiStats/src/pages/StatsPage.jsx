@@ -3,6 +3,7 @@ import { useSpotifyToken } from "../hooks/useSpotifyToken";
 import { useTopArtists } from "../hooks/useTopArtists";
 import "../styles/pages/statsPage.css";
 import TopItems from "../components/TopItems";
+import { useTopTracks } from "../hooks/useTopTracks";
 
 export default function StatsPage() {
   const { token } = useSpotifyToken();
@@ -16,13 +17,18 @@ export default function StatsPage() {
     loading: artistsLoading,
     error: artistsError,
   } = useTopArtists(token);
+  const {
+    topTrackData,
+    loading: tracksLoading,
+    error: tracksError,
+  } = useTopTracks(token);
 
-  if (userLoading || artistsLoading) {
+  if (userLoading || artistsLoading || tracksLoading) {
     return <div>loading...</div>;
   }
 
   if (userError || artistsError) {
-    return <div>Error: {userError || artistsError}</div>;
+    return <div>Error: {userError || artistsError || tracksError}</div>;
   }
 
   if (!userData || !topArtistsData) {
@@ -54,6 +60,17 @@ export default function StatsPage() {
         <TopItems
           title="Top Artists"
           data={topArtistsData}
+          statDescription="Above are your most listened to artists on Spotify. 
+          This was calculated by looking at your data from approximately the last 6 months.
+          The popularity score of an artist is a value between 0 and 100, with 100 being the most popular. 
+          The artist's popularity score is calculated from the popularity of all the artist's tracks."
+        />
+      </section>
+
+      <section>
+        <TopItems
+          title="Top Tracks"
+          data={topTrackData}
           statDescription="Above are your most listened to artists on Spotify. 
           This was calculated by looking at your data from approximately the last 6 months.
           The popularity score of an artist is a value between 0 and 100, with 100 being the most popular. 
