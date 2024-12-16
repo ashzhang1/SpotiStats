@@ -1,9 +1,9 @@
 /* landing page */
 
 .hero-section {
-  background-image: url("../../assets/background.svg");
+  /* background-image: url("../../assets/background.svg");
   background-size: 90% auto;
-  background-position: center;
+  background-position: center; */
   background-repeat: no-repeat;
   min-height: 100vh;
   display: flex;
