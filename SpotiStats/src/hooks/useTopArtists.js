@@ -6,6 +6,7 @@ export const useTopArtists = (token) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  //This uses the token to fetch the top artists data of the current logged in user
   useEffect(() => {
     const fetchTopArtists = async () => {
       if (!token) return;

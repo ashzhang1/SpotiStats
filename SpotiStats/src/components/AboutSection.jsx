@@ -22,8 +22,7 @@ export default function AboutSection() {
         />
         <p className="about-description">
           Utilising various charts, visualise your Spotify listening patterns,
-          encompassing your most recent favourite genres, artists, tracks as
-          well as music recommendations.
+          encompassing your most recent favourite artists and tracks.
         </p>
       </div>
 

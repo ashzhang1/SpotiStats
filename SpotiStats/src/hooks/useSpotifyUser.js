@@ -6,6 +6,7 @@ export const useSpotifyUser = (token) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  //This uses the token to fetch the current logged in user details
   useEffect(() => {
     const fetchUserData = async () => {
       if (!token) return;

@@ -11,7 +11,7 @@ export const useSpotifyAuth = (config) => {
       const SPACE_PARAM = "%20";
       const SCOPES_URL_PARAM = config.scopes.join(SPACE_PARAM);
 
-      //must use this structure
+      //must use this structure to open the login
       window.location.href = `${config.authEndpoint}?client_id=${config.clientId}&redirect_&redirect_uri=${config.redirectUri}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=true`;
     } catch (err) {
       setError(err);

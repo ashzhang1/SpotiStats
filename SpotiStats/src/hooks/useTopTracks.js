@@ -6,6 +6,7 @@ export const useTopTracks = (token) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  //This uses the token to fetch the top tracks data of the current logged in user
   useEffect(() => {
     const fetchTopTracks = async () => {
       if (!token) return;

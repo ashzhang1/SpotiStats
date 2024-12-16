@@ -13,7 +13,7 @@ export const SpotifyAuthButton = ({ config }) => {
       className="get-started-button"
       onClick={handleSpotifyLogin}
       disabled={isLoading}
-      aria-busy={isLoading}
+      aria-busy={isLoading} //helps with screen readers to let them know it is in a transition state
     >
       {isLoading ? "Loading..." : "Get Started"}
     </button>

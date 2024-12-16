@@ -24,7 +24,7 @@ export const spotifyService = {
   async getTopItems(token, itemType) {
     try {
       const response = await fetch(
-        `${SPOTIFY_API_BASE}/me/top/${itemType}?limit=5`,
+        `${SPOTIFY_API_BASE}/me/top/${itemType}?limit=5`, //we only want top 5
         {
           method: "GET",
           headers: {

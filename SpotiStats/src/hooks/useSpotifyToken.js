@@ -23,10 +23,10 @@ export const useSpotifyToken = () => {
         if (accessToken) {
           setToken(accessToken);
           sessionStorage.setItem("spotify_token", accessToken);
-          window.location.hash = ""; //clearing the hash for security reasons
+          window.location.hash = ""; //clearing the hash in the url for security reasons
         }
       } else {
-        const storedToken = sessionStorage.getItem("spotify_token"); // no hash in URL so we check session storage
+        const storedToken = sessionStorage.getItem("spotify_token"); // if no hash in URL, we check session storage
         if (storedToken) {
           setToken(storedToken);
         }
@@ -34,7 +34,7 @@ export const useSpotifyToken = () => {
     } catch (err) {
       setError(`Failed to process token: ${err.message}`);
     }
-  }, []);
+  }, []); //This will only run once when the component first renders
 
   return { token, error };
 };

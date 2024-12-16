@@ -49,7 +49,7 @@ export default function StatsPage() {
           <h1 className="stats-landing-title">
             Welcome {userData.display_name}
           </h1>
-          <h2 className="stats-landing-subtitle">Your Pie is Ready</h2>
+          <h2 className="stats-landing-subtitle">Your SpotiStats Await You</h2>
         </div>
         <div className="scroll-indicator">
           Scroll Down <span className="scroll-arrow">↓</span>
@@ -71,10 +71,10 @@ export default function StatsPage() {
         <TopItems
           title="Top Tracks"
           data={topTrackData}
-          statDescription="Above are your most listened to artists on Spotify. 
+          statDescription="Above are your most listened to tracks on Spotify. 
           This was calculated by looking at your data from approximately the last 6 months.
-          The popularity score of an artist is a value between 0 and 100, with 100 being the most popular. 
-          The artist's popularity score is calculated from the popularity of all the artist's tracks."
+          The popularity score of a track is a value between 0 and 100, with 100 being the most popular. 
+          A track's popularity is calculated by the most part, on the total number of plays the track has had and how recent those plays are."
         />
       </section>
     </>

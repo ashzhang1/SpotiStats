@@ -3,6 +3,7 @@ import "../styles/components/TopItems.css";
 
 export default function TableVis({ title, tableData, isTrack }) {
   const getImageUrl = (item) => {
+    //image path are different based if it is track or artist that we are fetching
     return isTrack ? item.album.images[0].url : item.images[0].url;
   };
 

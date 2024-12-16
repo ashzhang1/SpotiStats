@@ -41,6 +41,7 @@ export default function ChartVis({ chartData }) {
     },
   };
 
+  // Colours for each of the bars
   const backgroundColours = [
     "#81CFFA",
     "#EB4B62",
@@ -50,11 +51,11 @@ export default function ChartVis({ chartData }) {
   ];
 
   const data = {
-    labels: chartData.items.map((item) => item.name),
+    labels: chartData.items.map((item) => item.name), //these are the x-axis (i.e., artists and tracks)
     datasets: [
       {
         label: "Popularity",
-        data: chartData.items.map((item) => item.popularity),
+        data: chartData.items.map((item) => item.popularity), //actual data
         backgroundColor: backgroundColours,
         borderWidth: 1,
       },
