@@ -19,48 +19,6 @@ SpotiStats is a web application that provides users with insights into their Spo
 
 ## Getting Started
 
-# SpotiStats 🎵
-
-SpotiStats is an interactive web application that visualizes your Spotify listening habits, showing your top artists and tracks with engaging visualizations.
-
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Architecture](#architecture)
-- [Getting Started](#getting-started)
-- [What I Learned](#what-i-learned)
-
-## Project Overview
-
-SpotiStats is a web application that provides users with detailed insights into their Spotify listening habits. By leveraging the Spotify Web API, the application visualizes users' top artists and tracks, creating an interactive and engaging way to explore their musical preferences.
-
-Key Features:
-
-- Secure authentication with Spotify using OAuth 2.0
-- Interactive visualizations of user's top artists
-- Responsive design that works across desktop and mobile devices
-- Real-time data fetching from Spotify's API
-- Clean, modern user interface with intuitive navigation
-
-Technical Implementation:
-
-- Built with React and modern JavaScript features
-- Custom React hooks for state management and API interactions
-- Centralized service layer for API communication
-- Component-based architecture for maintainability and reusability
-- CSS modules for styled components with responsive design
-
-## Features
-
-- **Spotify Authentication**: Secure login using Spotify OAuth 2.0
-- **Top Artists Display**: View your most-listened-to artists
-- **Interactive Charts**: Visual representation of your listening habits
-- **Responsive Design**: Seamless experience across all devices
-- **Real-time Data**: Up-to-date statistics from your Spotify account
-
-## Getting Started
-
 1. Clone the repo:
 
 ```bash
