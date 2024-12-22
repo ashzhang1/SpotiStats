@@ -1,9 +1,6 @@
 /* landing page */
 
 .hero-section {
-  /* background-image: url("../../assets/background.svg");
-  background-size: 90% auto;
-  background-position: center; */
   background-repeat: no-repeat;
   min-height: 100vh;
   display: flex;
@@ -20,7 +17,7 @@
 }
 
 .logo-title {
-  font-size: 7em;
+  font-size: clamp(2rem, 5vw, 5rem);
 }
 
 .logo-image {
@@ -60,10 +57,6 @@
 }
 
 @media (max-width: 768px) {
-  .logo-title {
-    font-size: 4em;
-  }
-
   .landing-page-subtitle {
     font-size: 1.5rem;
   }
@@ -74,10 +67,6 @@
 }
 
 @media (max-width: 480px) {
-  .logo-title {
-    font-size: 3em;
-  }
-
   .landing-page-subtitle {
     font-size: 1.25rem;
   }

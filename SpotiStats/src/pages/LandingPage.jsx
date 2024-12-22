@@ -13,7 +13,7 @@ export default function LandingPage() {
         <div className="landing-page-content">
           <div className="landing-page-logo-container">
             <img src={logo} className="logo-image" alt="SpotiStats Logo" />
-            <h1 className="logo-title">SpotiStats</h1>
+            <h1 className="logo-title">MySpotiStats</h1>
           </div>
           <h2 className="landing-page-subtitle">Chart your musical voyage</h2>
         </div>

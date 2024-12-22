@@ -40,11 +40,13 @@ export default function StatsPage() {
       <section className="stats-landing-container">
         <div className="stats-landing-content-container">
           <div className="profile-image-container">
-            <img
-              src={userData.images[0].url}
-              className="profile-image"
-              alt={`${userData.display_name}'s profile`}
-            />
+            {userData?.images?.length > 0 && (
+              <img
+                src={userData.images[0].url}
+                className="profile-image"
+                alt={`${userData.display_name}'s profile`}
+              />
+            )}
           </div>
           <h1 className="stats-landing-title">
             Welcome {userData.display_name}
