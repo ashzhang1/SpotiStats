@@ -50,7 +50,7 @@ npm run dev
 
 ## Contact
 
-Ashley Zhang - [ashzhang1@gmail.com](mailto:ashzhang1@gmail.com)
+Ashley Zhang: [ashzhang1@gmail.com](mailto:ashzhang1@gmail.com)
 
 LinkedIn: [Ashley Zhang LinkedIn](https://www.linkedin.com/in/ashley-zhang1/)
 

@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import "../styles/components/TopItems.css";
+import spotifyIcon from "../assets/spotifyIcon.svg";
 
 export default function TableVis({ title, tableData, isTrack }) {
   const getImageUrl = (item) => {
@@ -18,7 +19,27 @@ export default function TableVis({ title, tableData, isTrack }) {
                 <td className="table-vis-cell table-vis-cell-image">
                   <img src={getImageUrl(item)} className="artist-image" />
                 </td>
-                <td className="table-vis-cell">{item.name}</td>
+                <td className="table-vis-cell">
+                  <div className="track-info">
+                    <span className="track-name">{item.name}</span>
+                    {isTrack && item.artists?.[0]?.name && (
+                      <span className="artist-name" aria-label="Artist name">
+                        {item.artists[0].name}
+                      </span>
+                    )}
+                  </div>
+                </td>
+                <td>
+                  <a
+                    href={item.external_urls.spotify}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="spotify-link"
+                    aria-label="View item on Spotify"
+                  >
+                    <img src={spotifyIcon} className="spotify-logo" />
+                  </a>
+                </td>
               </tr>
             ))
           ) : (

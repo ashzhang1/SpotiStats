@@ -44,7 +44,7 @@
 }
 
 .artist-image {
-  border-radius: 5px;
+  border-radius: 4px;
   width: 100%;
   height: auto;
   aspect-ratio: 1 / 1;
@@ -63,6 +63,34 @@
 
 .table-title {
   font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.spotify-logo {
+  width: 21px;
+  height: 21px;
+  object-fit: contain;
+}
+
+.spotify-link {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.spotify-link:hover,
+.spotify-link:focus {
+  transform: scale(1.2);
+}
+
+.artist-name {
+  font-size: 0.85em;
+  color: #666;
+  font-weight: normal;
+}
+
+.track-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 /* Anything below tablet size */
