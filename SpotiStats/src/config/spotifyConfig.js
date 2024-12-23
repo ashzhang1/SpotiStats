@@ -7,6 +7,7 @@ export const spotifyConfig = {
   scopes: [
     "user-top-read",
     "user-read-currently-playing",
+    "user-read-recently-played",
     "user-read-playback-state",
   ],
 };

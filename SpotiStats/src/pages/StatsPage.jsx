@@ -4,6 +4,7 @@ import { useTopArtists } from "../hooks/useTopArtists";
 import "../styles/pages/statsPage.css";
 import TopItems from "../components/TopItems";
 import { useTopTracks } from "../hooks/useTopTracks";
+import { useLastTrack } from "../hooks/useLastTrack";
 
 export default function StatsPage() {
   const { token } = useSpotifyToken();
@@ -12,26 +13,34 @@ export default function StatsPage() {
     loading: userLoading,
     error: userError,
   } = useSpotifyUser(token);
+
   const {
     topArtistsData,
     loading: artistsLoading,
     error: artistsError,
   } = useTopArtists(token);
+
   const {
     topTrackData,
     loading: tracksLoading,
     error: tracksError,
   } = useTopTracks(token);
 
-  if (userLoading || artistsLoading || tracksLoading) {
+  const {
+    lastTrackData,
+    loading: lastTrackLoading,
+    error: lastTrackError,
+  } = useLastTrack(token);
+
+  if (userLoading || artistsLoading || tracksLoading || lastTrackLoading) {
     return <div>loading...</div>;
   }
 
-  if (userError || artistsError) {
+  if (userError || artistsError || tracksLoading || lastTrackError) {
     return <div>Error: {userError || artistsError || tracksError}</div>;
   }
 
-  if (!userData || !topArtistsData) {
+  if (!userData || !topArtistsData || !topTrackData || !lastTrackData) {
     return <div>No data available</div>;
   }
 
