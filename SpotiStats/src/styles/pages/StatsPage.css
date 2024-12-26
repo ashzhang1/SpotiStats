@@ -2,10 +2,10 @@
   min-height: 100vh;
   width: 100%;
   background-image: url("../../assets/gradientBackground.png");
-  background-attachment: fixed; /* Keeps background fixed while scrolling */
-  background-size: cover; /* Ensures image covers entire container */
-  background-position: center; /* Centers the background image */
-  background-repeat: no-repeat; /* Prevents image from repeating */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   display: flex;
   align-items: center;
@@ -16,47 +16,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.profile-image-container {
-  display: flex;
-  justify-content: center;
-}
-
-.profile-image {
+.profile-image,
+.last-track-img {
   clip-path: circle();
-  max-width: 100%;
-  height: auto;
-  width: 75%;
-  display: block;
-  aspect-ratio: 1 / 1;
+  width: clamp(60px, 15vw, 100px);
+  height: clamp(60px, 15vw, 100px);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.display-name {
+  margin: 0;
+  font-size: 1.2rem;
 }
 
 .stats-landing-title {
-  font-size: clamp(2rem, 6vw, 6rem);
-  background: linear-gradient(
-    to right,
-    #fc72ff,
-    #8f68ff,
-    #487bff,
-    #8f68ff,
-    #fc72ff
-  );
-  background-clip: text;
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animate-gradient 2.5s linear infinite;
-}
-
-@keyframes animate-gradient {
-  to {
-    background-position: 200%;
-  }
-}
-
-.stats-landing-subtitle {
-  font-size: clamp(1rem, 3vw, 3rem);
+  font-size: clamp(2rem, 5vw, 5rem);
+  color: #f8f8f8;
+  text-align: center;
 }
 
 .scroll-indicator {
@@ -68,6 +49,45 @@
   gap: 8px;
   color: black;
   font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.user-info-outer-container {
+  border-style: dashed;
+  min-width: 50%;
+  border-color: yellow;
+}
+
+.info-subtitle {
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.user-info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.additional-info-container {
+  display: flex;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  gap: 1rem;
+}
+
+.user-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.last-track-info {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Arrow animation for the scroll down */

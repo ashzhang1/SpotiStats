@@ -25,5 +25,7 @@ export const useLastTrack = (token) => {
     fetchLastTrackData();
   }, [token]);
 
+  console.log(lastTrackData);
+
   return { lastTrackData, loading, error };
 };

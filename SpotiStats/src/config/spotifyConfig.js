@@ -6,6 +6,7 @@ export const spotifyConfig = {
   redirectUri: import.meta.env.VITE_SPOTIFY_REDIRECT_URI,
   scopes: [
     "user-top-read",
+    "user-read-email",
     "user-read-currently-playing",
     "user-read-recently-played",
     "user-read-playback-state",

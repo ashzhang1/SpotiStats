@@ -47,7 +47,7 @@ export const spotifyService = {
   async getLastPlayedTrack(token) {
     try {
       const response = await fetch(
-        `https://api.spotify.com/v1/me/player/recently-played`,
+        `https://api.spotify.com/v1/me/player/recently-played?limit=1`,
         {
           method: "GET",
           headers: {

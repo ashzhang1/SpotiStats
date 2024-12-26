@@ -48,20 +48,57 @@ export default function StatsPage() {
     <>
       <section className="stats-landing-container">
         <div className="stats-landing-content-container">
-          <div className="profile-image-container">
-            {userData?.images?.length > 0 && (
-              <img
-                src={userData.images[0].url}
-                className="profile-image"
-                alt={`${userData.display_name}'s profile`}
-              />
-            )}
-          </div>
           <h1 className="stats-landing-title">
-            Welcome {userData.display_name}
+            Welcome to Your SpotiStats, Scroll Down to View
           </h1>
-          <h2 className="stats-landing-subtitle">Your SpotiStats Await You</h2>
+
+          <div className="user-info-outer-container">
+            <div className="user-info-box">
+              <h4 className="info-subtitle">User</h4>
+              <div className="info-container">
+                {userData?.images?.length > 0 ? (
+                  <img
+                    src={userData.images[0].url}
+                    className="profile-image"
+                    alt={`${userData.display_name}'s profile`}
+                  />
+                ) : (
+                  <div className="profile-image-placeholder" />
+                )}
+                <div className="user-info-container">
+                  <span className="display-name">{userData.display_name}</span>
+                  <span className="user-email">{userData.email}</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="additional-info-container">
+              <div className="last-track container">
+                <h4 className="info-subtitle">Last Track</h4>
+                <div className="info-container">
+                  <img
+                    className="last-track-img"
+                    src={lastTrackData.items[0].track.album.images[0].url}
+                  />
+                  <div className="last-track-info">
+                    <span>{lastTrackData.items[0].track.name}</span>
+                    <span>{lastTrackData.items[0].track.artists[0].name}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="follower-count-container">
+                <h4 className="info-subtitle">Follower Count</h4>
+                <div className="info-container">
+                  <span className="display-name">
+                    {userData.followers.total} Followers
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div className="scroll-indicator">
           Scroll Down <span className="scroll-arrow">↓</span>
         </div>
