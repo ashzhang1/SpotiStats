@@ -1,10 +1,11 @@
 import { useSpotifyUser } from "../hooks/useSpotifyUser";
 import { useSpotifyToken } from "../hooks/useSpotifyToken";
 import { useTopArtists } from "../hooks/useTopArtists";
-import "../styles/pages/statsPage.css";
 import TopItems from "../components/TopItems";
 import { useTopTracks } from "../hooks/useTopTracks";
 import { useLastTrack } from "../hooks/useLastTrack";
+import spotifyIcon from "../assets/spotifyIcon.svg";
+import "../styles/pages/statsPage.css";
 
 export default function StatsPage() {
   const { token } = useSpotifyToken();
@@ -54,7 +55,7 @@ export default function StatsPage() {
 
           <div className="user-info-outer-container">
             <div className="user-info-box">
-              <h4 className="info-subtitle">User</h4>
+              <h4 className="info-subtitle">Logged in as</h4>
               <div className="info-container">
                 {userData?.images?.length > 0 ? (
                   <img
@@ -73,17 +74,31 @@ export default function StatsPage() {
             </div>
 
             <div className="additional-info-container">
-              <div className="last-track container">
-                <h4 className="info-subtitle">Last Track</h4>
+              <div className="last-track-container">
+                <h4 className="info-subtitle">Last Played Track</h4>
                 <div className="info-container">
                   <img
                     className="last-track-img"
                     src={lastTrackData.items[0].track.album.images[0].url}
+                    alt="Last track album art"
                   />
                   <div className="last-track-info">
                     <span>{lastTrackData.items[0].track.name}</span>
                     <span>{lastTrackData.items[0].track.artists[0].name}</span>
                   </div>
+                  <a
+                    href={lastTrackData.items[0].track.external_urls.spotify}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="spotify-link"
+                    aria-label="View last track on Spotify"
+                  >
+                    <img
+                      src={spotifyIcon}
+                      className="spotify-logo"
+                      alt="Spotify icon"
+                    />
+                  </a>
                 </div>
               </div>
 
