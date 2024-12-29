@@ -3,6 +3,11 @@
 ## Project Overview
 
 SpotiStats is a web application that provides users with insights into their Spotify listening habits. By leveraging the Spotify Web API, SpotiStats visualises users' top artists and tracks with engaging charts and tables.
+**Live Web Link** https://my-spoti-stats.netlify.app/
+
+## Warning
+
+Currently, Spotify's developer restrictions limit this app to 25 users. I have submitted a request to increase this limit and are awaiting approval. If you're unable to log in, please check back later once the restriction has been lifted.
 
 ### Technical Details
 
