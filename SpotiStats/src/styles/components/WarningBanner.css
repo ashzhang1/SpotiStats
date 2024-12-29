@@ -1,0 +1,40 @@
+.warning-banner-container {
+  background-color: orange;
+  max-width: 400px;
+  width: calc(100% - 2rem);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 20px;
+  margin-left: 2rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+.warning-banner-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ff9100;
+}
+
+.warning-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.warning-subtitle {
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .warning-banner-container {
+    width: 50%;
+    padding: 8px;
+    font-size: 0.75rem;
+  }
+}
