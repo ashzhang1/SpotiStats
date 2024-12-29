@@ -113,10 +113,6 @@ export default function StatsPage() {
             </div>
           </div>
         </div>
-
-        <div className="scroll-indicator">
-          Scroll Down <span className="scroll-arrow">↓</span>
-        </div>
       </section>
 
       <section>
