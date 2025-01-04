@@ -1,12 +1,12 @@
 import "../styles/components/NavBar.css";
+import { useAuth } from "../context/AuthContext";
 import githubLogo from "../assets/github.svg";
-import { useAuthStatus } from "../hooks/useAuthStatus";
 import logoutIcon from "../assets/logoutIcon.svg";
 
 const GITHUB_REPO_URL = "https://github.com/ashzhang1/SpotiStats";
 
 export default function NavBar() {
-  const { isAuthenticated, logout } = useAuthStatus();
+  const { isAuthenticated, logout } = useAuth();
   return (
     <>
       <nav className="nav-bar-container">

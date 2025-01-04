@@ -1,5 +1,6 @@
+import { useAuth } from "../context/AuthContext";
 import { useSpotifyUser } from "../hooks/useSpotifyUser";
-import { useSpotifyToken } from "../hooks/useSpotifyToken";
+// import { useSpotifyToken } from "../hooks/useSpotifyToken";
 import { useTopArtists } from "../hooks/useTopArtists";
 import TopItems from "../components/TopItems";
 import { useTopTracks } from "../hooks/useTopTracks";
@@ -8,7 +9,7 @@ import spotifyIcon from "../assets/spotifyIcon.svg";
 import "../styles/pages/statsPage.css";
 
 export default function StatsPage() {
-  const { token } = useSpotifyToken();
+  const { token } = useAuth();
   const {
     userData,
     loading: userLoading,
