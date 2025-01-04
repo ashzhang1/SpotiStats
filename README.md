@@ -3,9 +3,8 @@
 ## Project Overview
 
 SpotiStats is a web application that provides users with insights into their Spotify listening habits. By leveraging the Spotify Web API, SpotiStats visualises users' top artists and tracks with engaging charts and tables.
-**Live Web Link:**
-
-https://my-spoti-stats.netlify.app/
+\
+**Live Web Link:** https://my-spoti-stats.netlify.app/
 
 ## Warning
 
@@ -20,7 +19,7 @@ Currently, Spotify's developer restrictions limit this app to 25 users. I have s
 ## Key Learnings
 
 - Implemented user authentication with Spotify's OAuth 2.0
-- Securely managed access tokens and user sessions
+- Implemented centralised authentication state management using React Context
 - Created custom hooks to separate business logic from UI components and to maintain appropriate state management patterns
 - Structured API calls efficiently using a service layer pattern
 
